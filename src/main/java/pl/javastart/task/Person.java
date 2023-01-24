@@ -7,24 +7,9 @@ public class Person {
     private String pesel;
 
     public Person(String firstName, String lastName, int age, String pesel) throws NameUndefinedException, IncorrectAgeException {
-        if (firstName == null) {
-            this.setFirstName(null);
-        }
-        if (lastName == null) {
-            this.setLastName(null);
-        }
-        if (firstName.length() < 2) {
-            this.setFirstName("");
-        }
-        if (lastName.length() < 2) {
-            this.setLastName("");
-        }
-        if (age < 1) {
-            this.setAge(-1);
-        }
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setAge(age);
         this.pesel = pesel;
     }
 
